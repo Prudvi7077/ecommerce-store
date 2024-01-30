@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 const NavbarActions = () => {
   const cart=useCart()
+  const router=useRouter()
   const [isMounted,setIsMounted]=useState(false)
   useEffect(()=>{
     setIsMounted(true)
@@ -13,7 +14,6 @@ const NavbarActions = () => {
   if(!isMounted){
     return null;
   }
-  const router=useRouter()
 
     return ( 
         <div className="ml-auto flex items-center gap-x-4">
